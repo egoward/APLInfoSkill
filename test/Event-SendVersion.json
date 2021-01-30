@@ -125,7 +125,14 @@
             "timestamp": "2020-07-10T06:27:20Z",
             "locale": "en-GB",
             "arguments": [
-                "SendVersion"
+                "SendVersion",
+                {
+                    "elapsedTime": 9152,
+                    "height": 600.1878051757812,
+                    "mode": "hub",
+                    "reason": "Mount-Timer",
+                    "width": 1023.8497924804688
+                }
             ],
             "components": {},
             "source": {

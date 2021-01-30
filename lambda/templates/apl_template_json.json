@@ -26,6 +26,10 @@
         },
         "onMount": [
             {
+                "type": "SendVersionEvent",
+                "reason": "Mount"
+            },
+            {
                 "type": "SetStatus",
                 "text": "Waiting 1000ms"
             },
@@ -38,10 +42,8 @@
                 "text": "Posting back for view state"
             },
             {
-                "type": "SendEvent",
-                "arguments": [
-                    "SendVersion"
-                ]
+                "type": "SendVersionEvent",
+                "reason": "Mount-Timer"
             }
         ],
         "graphics": {},
@@ -50,12 +52,36 @@
                 "parameters": [
                     "text"
                 ],
-                "commands": {
+                "commands": 
+                {
                     "type": "SetValue",
                     "property": "text",
                     "value": "${text}",
                     "componentId": "statusComponent"
                 }
+            },
+            "SendVersionEvent": {
+                "parameters" : [
+                    "reason"
+                ],
+                "commands": 
+                [
+                    {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "SendVersion",
+                            {
+                                "reason":"${reason}",
+                                "mode":"${viewport.mode}",
+                                "width":"${viewport.width}",
+                                "height":"${viewport.height}",
+                                "pixelWidth":"${viewport.pixelWidth}",
+                                "pixelHeight":"${viewport.pixelHeight}",
+                                "elapsedTime":"${elapsedTime}"
+                            }
+                        ]                        
+                    }
+                ]
             }
         },
         "layouts": {
@@ -341,10 +367,8 @@
                                     "text": "Reflecting version info..."
                                 },
                                 {
-                                    "type": "SendEvent",
-                                    "arguments": [
-                                        "SendVersion"
-                                    ]
+                                    "type": "SendVersionEvent",
+                                    "reason": "Click"
                                 }
                             ]
                         }

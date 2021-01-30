@@ -20,13 +20,19 @@ const SendVersionInfo = {
     handle(handlerInput) {
         var version = 'Exception finding version';
         var promptToRetry = false;
+        const request = Alexa.getRequest(handlerInput.requestEnvelope);
+        const commandName = request.arguments[0];
+        const arguments = request.arguments[1];
 
         try {
             //When APL is on the screen, the view state includes the version information
             var aplPayload = handlerInput.requestEnvelope.context["Alexa.Presentation.APL"];
             if(!aplPayload) {
                 version = "No APL context.  Tap to retry";
-                promptToRetry = true;
+                //
+                if( arguments.reason=="Mount-Timer") {
+                    promptToRetry = true;
+                }
             } else {
                 if(aplPayload.version) {
                     version = aplPayload.version;
@@ -52,7 +58,7 @@ const SendVersionInfo = {
             });
 
         if(promptToRetry) {
-            response.speak("No version found.  Tap version to retry")
+            response.speak("No version returned in context")
         }
 
         return response.getResponse();

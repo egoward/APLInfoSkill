@@ -95,8 +95,15 @@
         "timestamp": "2021-01-30T12:20:26Z",
         "locale": "en-US",
         "arguments": [
-            "SendVersion"
-        ],
+            "SendVersion",
+            {
+                "elapsedTime": 9152,
+                "height": 600.1878051757812,
+                "mode": "hub",
+                "reason": "Mount-Timer",
+                "width": 1023.8497924804688
+            }
+    ],
         "components": {},
         "source": {
             "type": "Document",
