@@ -11,8 +11,9 @@ function testPayload( payload ) {
 }
 
 //testPayload(require('./launch.json'))
-//testPayload(require('./Event-SendVersion.json'))
-testPayload(require('./Intent-Stop.json'))
+testPayload(require('./Event-SendVersion.json'))
+//testPayload(require('./Intent-Stop.json'))
+//testPayload(require('./Event-SendVersionBroken.json'))
 
 console.log("Done!");
 

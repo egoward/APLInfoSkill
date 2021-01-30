@@ -18,15 +18,29 @@ const SendVersionInfo = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) == "Alexa.Presentation.APL.UserEvent" && Alexa.getRequest(handlerInput.requestEnvelope).arguments[0] == "SendVersion";
     },
     handle(handlerInput) {
-        var version = 'Unknown Version';
+        var version = 'Exception finding version';
+        var promptToRetry = false;
+
         try {
             //When APL is on the screen, the view state includes the version information
-            version = handlerInput.requestEnvelope.context["Alexa.Presentation.APL"].version;
+            var aplPayload = handlerInput.requestEnvelope.context["Alexa.Presentation.APL"];
+            if(!aplPayload) {
+                version = "No APL context.  Tap to retry";
+                promptToRetry = true;
+            } else {
+                if(aplPayload.version) {
+                    version = aplPayload.version;
+                } else {
+                    version = "No version in APL context."
+                }
+            }
         } catch {
-
         }
-        return handlerInput.responseBuilder
-            .addDirective({
+
+
+        var response = handlerInput.responseBuilder;
+        
+        response.addDirective({
                 type : 'Alexa.Presentation.APL.ExecuteCommands',
                 token: "VersionInfo",
                 "commands": [
@@ -35,8 +49,13 @@ const SendVersionInfo = {
                         "text": `${version}`,
                     }                    
                 ]
-            })
-            .getResponse();
+            });
+
+        if(promptToRetry) {
+            response.speak("No version found.  Tap version to retry")
+        }
+
+        return response.getResponse();
     }
 };
 

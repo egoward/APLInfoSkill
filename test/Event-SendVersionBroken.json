@@ -1,0 +1,107 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": false,
+        "sessionId": "amzn1.echo-api.session.z",
+        "application": {
+            "applicationId": "amzn1.ask.skill.z"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.z"
+        }
+    },
+    "context": {
+        "Viewports": [
+            {
+                "type": "APL",
+                "id": "main",
+                "shape": "RECTANGLE",
+                "dpi": 160,
+                "presentationType": "STANDARD",
+                "canRotate": false,
+                "configuration": {
+                    "current": {
+                        "mode": "HUB",
+                        "video": {
+                            "codecs": [
+                                "H_264_42",
+                                "H_264_41"
+                            ]
+                        },
+                        "size": {
+                            "type": "DISCRETE",
+                            "pixelWidth": 1024,
+                            "pixelHeight": 600
+                        }
+                    }
+                }
+            }
+        ],
+        "Viewport": {
+            "experiences": [
+                {
+                    "arcMinuteWidth": 246,
+                    "arcMinuteHeight": 144,
+                    "canRotate": false,
+                    "canResize": false
+                }
+            ],
+            "mode": "HUB",
+            "shape": "RECTANGLE",
+            "pixelWidth": 1024,
+            "pixelHeight": 600,
+            "dpi": 160,
+            "currentPixelWidth": 1024,
+            "currentPixelHeight": 600,
+            "touch": [
+                "SINGLE"
+            ],
+            "video": {
+                "codecs": [
+                    "H_264_42",
+                    "H_264_41"
+                ]
+            }
+        },
+        "Extensions": {
+            "available": {
+                "aplext:backstack:10": {}
+            }
+        },
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.zzz"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.zz"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.zz",
+                "supportedInterfaces": {
+                    "Alexa.Presentation.APL": {
+                        "runtime": {
+                            "maxVersion": "1.3"
+                        }
+                    }
+                }
+            },
+            "apiEndpoint": "https://api.eu.amazonalexa.com",
+            "apiAccessToken": "zz"
+        }
+    },
+    "request": {
+        "type": "Alexa.Presentation.APL.UserEvent",
+        "requestId": "amzn1.echo-api.request.3f079fa3-1945-4d91-aaa5-d972cd75a8a6",
+        "timestamp": "2021-01-30T12:20:26Z",
+        "locale": "en-US",
+        "arguments": [
+            "SendVersion"
+        ],
+        "components": {},
+        "source": {
+            "type": "Document",
+            "handler": "Mount"
+        },
+        "token": "VersionInfo"
+    }
+}

@@ -325,11 +325,28 @@
                             "grow": 1
                         },
                         {
-                            "type": "Text",
-                            "text": "${payload.view.footer}",
-                            "fontSize": "24dp",
-                            "textAlign": "center",
-                            "id": "statusComponent"
+                            "type": "TouchWrapper",
+                            "item": [
+                                {
+                                    "type": "Text",
+                                    "text": "${payload.view.footer}",
+                                    "fontSize": "24dp",
+                                    "textAlign": "center",
+                                    "id": "statusComponent"
+                                }
+                            ],
+                            "onPress": [
+                                {
+                                    "type": "SetStatus",
+                                    "text": "Reflecting version info..."
+                                },
+                                {
+                                    "type": "SendEvent",
+                                    "arguments": [
+                                        "SendVersion"
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
