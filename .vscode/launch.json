@@ -1,0 +1,13 @@
+{
+    "configurations": [
+    {
+        "name": "Launch Test JS",
+        "program": "${workspaceFolder}/test/test.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "pwa-node"
+    }
+    ]
+}

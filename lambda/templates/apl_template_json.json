@@ -1,0 +1,575 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.5",
+        "settings": {},
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-layouts",
+                "version": "1.2.0"
+            }
+        ],
+        "resources": [
+            {
+                "dimensions": {
+                    "treeIndent": "${viewport.shape== 'round'?14dp:18dp}"
+                }
+            }
+        ],
+        "styles": {
+            "InfoDetailText": {
+                "values": {
+                    "fontSize": "${viewport.shape== 'round'?14dp:18dp}"
+                }
+            }
+        },
+        "onMount": [
+            {
+                "type": "SetStatus",
+                "text": "Waiting 1000ms"
+            },
+            {
+                "delay": 1000,
+                "type": "Idle"
+            },
+            {
+                "type": "SetStatus",
+                "text": "Posting back for view state"
+            },
+            {
+                "type": "SendEvent",
+                "arguments": [
+                    "SendVersion"
+                ]
+            }
+        ],
+        "graphics": {},
+        "commands": {
+            "SetStatus": {
+                "parameters": [
+                    "text"
+                ],
+                "commands": {
+                    "type": "SetValue",
+                    "property": "text",
+                    "value": "${text}",
+                    "componentId": "statusComponent"
+                }
+            }
+        },
+        "layouts": {
+            "listItem": {
+                "parameters": [
+                    "node"
+                ],
+                "item": [
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "direction": "row",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${node.id}",
+                                        "style": "InfoDetailText"
+                                    },
+                                    {
+                                        "when": "${node.value}",
+                                        "type": "Text",
+                                        "text": ": ${node.value}",
+                                        "style": "InfoDetailText"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "when": "${node.children.length > 0 }",
+                                "paddingLeft": "${treeIndent}",
+                                "data": "${node.children}",
+                                "grow": 1,
+                                "items": [
+                                    {
+                                        "type": "listItem",
+                                        "node": "${data}",
+                                        "paddingLeft": "${@treeIndent}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "RuntimeInfo": {
+                "parameters": [],
+                "item": [
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "style": "InfoDetailText",
+                                "text": "Client Runtime"
+                            },
+                            {
+                                "type": "Container",
+                                "paddingLeft": "20",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.dpi : '${viewport.dpi}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.height : '${viewport.height}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.mode : '${viewport.mode}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.pixelWidth : '${viewport.pixelWidth}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.pixelHeight : '${viewport.pixelHeight}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.shape : '${viewport.shape}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.width : '${viewport.width}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "viewport.theme : '${viewport.theme}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "elapsedTime : '${elapsedTime}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "localTime : '${localTime}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.agentName : '${environment.agentName}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.agentVersion : '${environment.agentVersion}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.allowOpenURL : '${environment.allowOpenURL}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.animation : '${environment.animation}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.aplVersion : '${environment.aplVersion}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.disallowVideo : '${environment.disallowVideo}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.extension['aplext:backstack:10'] : '${environment.extension['aplext:backstack:10']}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.fontScale : '${environment.fontScale}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.screenMode : '${environment.screenMode}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.screenReader : '${environment.screenReader}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.timing.doublePressTimeout : '${environment.timing.doublePressTimeout}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.timing.longPressTimeout : '${environment.timing.longPressTimeout}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.timing.minimumFlingVelocity : '${environment.timing.minimumFlingVelocity}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.timing.pressedDuration : '${environment.timing.pressedDuration}'"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "style": "InfoDetailText",
+                                        "text": "environment.timing.topOrScrollTimeout : '${environment.timing.topOrScrollTimeout}'"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "height": "100%",
+                    "width": "100%",
+                    "paddingLeft": "${viewport.shape== 'round'?14vw:0}",
+                    "paddingTop": "${viewport.shape== 'round'?14vw:0}",
+                    "paddingRight": "${viewport.shape== 'round'?14vw:0}",
+                    "paddingBottom": "${viewport.shape== 'round'?14vw:0}",
+                    "items": [
+                        {
+                            "type": "Text",
+                            "text": "${payload.view.header}",
+                            "fontSize": "24dp",
+                            "textAlign": "center"
+                        },
+                        {
+                            "type": "ScrollView",
+                            "item": {
+                                "type": "Container",
+                                "items": [
+                                    {
+                                        "type": "RuntimeInfo"
+                                    },
+                                    {
+                                        "type": "listItem",
+                                        "node": "${payload.data}"
+                                    }
+                                ]
+                            },
+                            "grow": 1
+                        },
+                        {
+                            "type": "Text",
+                            "text": "${payload.view.footer}",
+                            "fontSize": "24dp",
+                            "textAlign": "center",
+                            "id": "statusComponent"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "datasources": {
+        "view": {
+            "type": "object",
+            "header": "APL Version info",
+            "footer": "Please scroll up/down for more"
+        },
+        "data": {
+            "id": "APL Info",
+            "children": [
+                {
+                    "id": "version",
+                    "children": [],
+                    "value": "1.0"
+                },
+                {
+                    "id": "context",
+                    "children": [
+                        {
+                            "id": "Alexa.Presentation.APL",
+                            "children": [
+                                {
+                                    "id": "token",
+                                    "children": [],
+                                    "value": "TemplateList"
+                                },
+                                {
+                                    "id": "version",
+                                    "children": [],
+                                    "value": "AriaRuntimeLibrary-a.b.c.d"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Viewport",
+                            "children": [
+                                {
+                                    "id": "experiences",
+                                    "children": [
+                                        {
+                                            "id": "0",
+                                            "children": [
+                                                {
+                                                    "id": "arcMinuteWidth",
+                                                    "children": [],
+                                                    "value": "346"
+                                                },
+                                                {
+                                                    "id": "arcMinuteHeight",
+                                                    "children": [],
+                                                    "value": "216"
+                                                },
+                                                {
+                                                    "id": "canRotate",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "id": "canResize",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "mode",
+                                    "children": [],
+                                    "value": "HUB"
+                                },
+                                {
+                                    "id": "shape",
+                                    "children": [],
+                                    "value": "RECTANGLE"
+                                },
+                                {
+                                    "id": "pixelWidth",
+                                    "children": [],
+                                    "value": "1280"
+                                },
+                                {
+                                    "id": "pixelHeight",
+                                    "children": [],
+                                    "value": "800"
+                                },
+                                {
+                                    "id": "dpi",
+                                    "children": [],
+                                    "value": "160"
+                                },
+                                {
+                                    "id": "currentPixelWidth",
+                                    "children": [],
+                                    "value": "1280"
+                                },
+                                {
+                                    "id": "currentPixelHeight",
+                                    "children": [],
+                                    "value": "800"
+                                },
+                                {
+                                    "id": "touch",
+                                    "children": [
+                                        {
+                                            "id": "0",
+                                            "children": [],
+                                            "value": "SINGLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "keyboard",
+                                    "children": []
+                                },
+                                {
+                                    "id": "video",
+                                    "children": [
+                                        {
+                                            "id": "codecs",
+                                            "children": [
+                                                {
+                                                    "id": "0",
+                                                    "children": [],
+                                                    "value": "H_264_42"
+                                                },
+                                                {
+                                                    "id": "1",
+                                                    "children": [],
+                                                    "value": "H_264_41"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Viewports",
+                            "children": [
+                                {
+                                    "id": "0",
+                                    "children": [
+                                        {
+                                            "id": "type",
+                                            "children": [],
+                                            "value": "APL"
+                                        },
+                                        {
+                                            "id": "id",
+                                            "children": [],
+                                            "value": "main"
+                                        },
+                                        {
+                                            "id": "shape",
+                                            "children": [],
+                                            "value": "RECTANGLE"
+                                        },
+                                        {
+                                            "id": "dpi",
+                                            "children": [],
+                                            "value": "160"
+                                        },
+                                        {
+                                            "id": "presentationType",
+                                            "children": [],
+                                            "value": "STANDARD"
+                                        },
+                                        {
+                                            "id": "canRotate",
+                                            "children": []
+                                        },
+                                        {
+                                            "id": "configuration",
+                                            "children": [
+                                                {
+                                                    "id": "current",
+                                                    "children": [
+                                                        {
+                                                            "id": "mode",
+                                                            "children": [],
+                                                            "value": "HUB"
+                                                        },
+                                                        {
+                                                            "id": "video",
+                                                            "children": [
+                                                                {
+                                                                    "id": "codecs",
+                                                                    "children": [
+                                                                        {
+                                                                            "id": "0",
+                                                                            "children": [],
+                                                                            "value": "H_264_42"
+                                                                        },
+                                                                        {
+                                                                            "id": "1",
+                                                                            "children": [],
+                                                                            "value": "H_264_41"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": "size",
+                                                            "children": [
+                                                                {
+                                                                    "id": "type",
+                                                                    "children": [],
+                                                                    "value": "DISCRETE"
+                                                                },
+                                                                {
+                                                                    "id": "pixelWidth",
+                                                                    "children": [],
+                                                                    "value": "1280"
+                                                                },
+                                                                {
+                                                                    "id": "pixelHeight",
+                                                                    "children": [],
+                                                                    "value": "800"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "request",
+                    "children": [
+                        {
+                            "id": "type",
+                            "children": [],
+                            "value": "IntentRequest"
+                        },
+                        {
+                            "id": "requestId",
+                            "children": [],
+                            "value": "amzn1.echo-api.request.zzz"
+                        },
+                        {
+                            "id": "locale",
+                            "children": [],
+                            "value": "en-GB"
+                        },
+                        {
+                            "id": "timestamp",
+                            "children": [],
+                            "value": "2020-06-27T17:36:36Z"
+                        },
+                        {
+                            "id": "intent",
+                            "children": [
+                                {
+                                    "id": "name",
+                                    "children": [],
+                                    "value": "ShowVersion"
+                                },
+                                {
+                                    "id": "confirmationStatus",
+                                    "children": [],
+                                    "value": "NONE"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "object"
+        }
+    },
+    "sources": {}
+}

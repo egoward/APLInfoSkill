@@ -1,0 +1,95 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": true,
+        "sessionId": "amzn1.echo-api.session.zz",
+        "application": {
+            "applicationId": "amzn1.ask.skill.zz"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.zz"
+        }
+    },
+    "context": {
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.zz"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.zz"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.zz",
+                "supportedInterfaces": {
+                    "Alexa.Presentation.APL": {
+                        "runtime": {
+                            "maxVersion": "1.3"
+                        }
+                    }
+                }
+            },
+            "apiEndpoint": "https://api.amazonalexa.com",
+            "apiAccessToken": "zz.zz.zz"
+        },
+        "Viewport": {
+            "experiences": [
+                {
+                    "arcMinuteWidth": 346,
+                    "arcMinuteHeight": 216,
+                    "canRotate": false,
+                    "canResize": false
+                }
+            ],
+            "mode": "HUB",
+            "shape": "RECTANGLE",
+            "pixelWidth": 1280,
+            "pixelHeight": 800,
+            "dpi": 160,
+            "currentPixelWidth": 1280,
+            "currentPixelHeight": 800,
+            "touch": [
+                "SINGLE"
+            ],
+            "keyboard": [],
+            "video": {
+                "codecs": [
+                    "H_264_42",
+                    "H_264_41"
+                ]
+            }
+        },
+        "Viewports": [
+            {
+                "type": "APL",
+                "id": "main",
+                "shape": "RECTANGLE",
+                "dpi": 160,
+                "presentationType": "STANDARD",
+                "canRotate": false,
+                "configuration": {
+                    "current": {
+                        "mode": "HUB",
+                        "video": {
+                            "codecs": [
+                                "H_264_42",
+                                "H_264_41"
+                            ]
+                        },
+                        "size": {
+                            "type": "DISCRETE",
+                            "pixelWidth": 1280,
+                            "pixelHeight": 800
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "request": {
+        "type": "LaunchRequest",
+        "requestId": "amzn1.echo-api.request.zz",
+        "timestamp": "2020-06-07T10:08:25Z",
+        "locale": "en-US",
+        "shouldLinkResultBeReturned": false
+    }
+}

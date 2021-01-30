@@ -1,0 +1,110 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Information about APL on this device",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "name": "APL Engineering Information",
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png"
+        },
+        "en-GB": {
+          "summary": "Information about APL on this device",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "name": "APL Engineering Information",
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Please test on Show Gen-1/2 or Show-5/8",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:953175599357:function:ask-apl-info-skill-default-skil-AlexaSkillFunction-CGF9JCBS5B8"
+        },
+        "interfaces": [
+          {
+            "type": "ALEXA_PRESENTATION_APL",
+            "supportedViewports": [
+              {
+                "maxHeight": 480,
+                "maxWidth": 480,
+                "minHeight": 480,
+                "minWidth": 480,
+                "mode": "HUB",
+                "shape": "ROUND"
+              },
+              {
+                "maxHeight": 600,
+                "maxWidth": 1024,
+                "minHeight": 600,
+                "minWidth": 1024,
+                "mode": "HUB",
+                "shape": "RECTANGLE"
+              },
+              {
+                "maxHeight": 800,
+                "maxWidth": 1280,
+                "minHeight": 800,
+                "minWidth": 1280,
+                "mode": "HUB",
+                "shape": "RECTANGLE"
+              },
+              {
+                "maxHeight": 540,
+                "maxWidth": 960,
+                "minHeight": 540,
+                "minWidth": 960,
+                "mode": "TV",
+                "shape": "RECTANGLE"
+              },
+              {
+                "maxHeight": 480,
+                "maxWidth": 960,
+                "minHeight": 480,
+                "minWidth": 960,
+                "mode": "HUB",
+                "shape": "RECTANGLE"
+              }
+            ]
+          }
+        ],
+        "tasks": [
+          {
+            "name": "ShowTemplate",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
+          "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
+        },
+        "en-GB": {
+          "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
+          "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
+        }
+      }
+    }
+  }
+}
