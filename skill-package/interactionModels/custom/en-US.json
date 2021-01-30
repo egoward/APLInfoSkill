@@ -16,29 +16,17 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "DummyIntent",
                     "slots": [],
                     "samples": [
                         "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
+                        "hello there"
                     ]
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
-                },
-                {
-                    "name": "ProductSearchIntent",
-                    "slots": [],
-                    "samples": [
-                        "show product search"
-                    ]
-                }                
+                }              
             ],
             "types": []
         }

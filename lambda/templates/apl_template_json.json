@@ -120,46 +120,6 @@
                                     {
                                         "type": "Text",
                                         "style": "InfoDetailText",
-                                        "text": "viewport.dpi : '${viewport.dpi}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.height : '${viewport.height}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.mode : '${viewport.mode}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.pixelWidth : '${viewport.pixelWidth}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.pixelHeight : '${viewport.pixelHeight}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.shape : '${viewport.shape}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.width : '${viewport.width}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "viewport.theme : '${viewport.theme}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
                                         "text": "elapsedTime : '${elapsedTime}'"
                                     },
                                     {
@@ -170,77 +130,156 @@
                                     {
                                         "type": "Text",
                                         "style": "InfoDetailText",
-                                        "text": "environment.agentName : '${environment.agentName}'"
+                                        "text": "Design System"
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "paddingLeft": "20",
+                                        "items": [
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "@viewportProfile : '${@viewportProfile}'"
+                                            }
+                                        ]
                                     },
                                     {
                                         "type": "Text",
                                         "style": "InfoDetailText",
-                                        "text": "environment.agentVersion : '${environment.agentVersion}'"
+                                        "text": "Viewport"
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "paddingLeft": "20",
+                                        "items": [
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.height : '${viewport.height}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.mode : '${viewport.mode}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.pixelWidth : '${viewport.pixelWidth}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.pixelHeight : '${viewport.pixelHeight}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.shape : '${viewport.shape}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.width : '${viewport.width}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.theme : '${viewport.theme}'"
+                                            }
+                                        ]
                                     },
                                     {
                                         "type": "Text",
                                         "style": "InfoDetailText",
-                                        "text": "environment.allowOpenURL : '${environment.allowOpenURL}'"
+                                        "text": "Environment"
                                     },
                                     {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.animation : '${environment.animation}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.aplVersion : '${environment.aplVersion}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.disallowVideo : '${environment.disallowVideo}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.extension['aplext:backstack:10'] : '${environment.extension['aplext:backstack:10']}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.fontScale : '${environment.fontScale}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.screenMode : '${environment.screenMode}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.screenReader : '${environment.screenReader}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.timing.doublePressTimeout : '${environment.timing.doublePressTimeout}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.timing.longPressTimeout : '${environment.timing.longPressTimeout}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.timing.minimumFlingVelocity : '${environment.timing.minimumFlingVelocity}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.timing.pressedDuration : '${environment.timing.pressedDuration}'"
-                                    },
-                                    {
-                                        "type": "Text",
-                                        "style": "InfoDetailText",
-                                        "text": "environment.timing.topOrScrollTimeout : '${environment.timing.topOrScrollTimeout}'"
+                                        "type": "Container",
+                                        "paddingLeft": "20",
+                                        "items": [
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.agentName : '${environment.agentName}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.agentVersion : '${environment.agentVersion}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.allowOpenURL : '${environment.allowOpenURL}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.animation : '${environment.animation}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.aplVersion : '${environment.aplVersion}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.disallowVideo : '${environment.disallowVideo}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.fontScale : '${environment.fontScale}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.screenMode : '${environment.screenMode}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "environment.screenReader : '${environment.screenReader}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "Timing"
+                                            },
+                                            {
+                                                "type": "Container",
+                                                "paddingLeft": "20",
+                                                "items": [
+                                                    {
+                                                        "type": "Text",
+                                                        "style": "InfoDetailText",
+                                                        "text": "environment.timing.doublePressTimeout : '${environment.timing.doublePressTimeout}'"
+                                                    },
+                                                    {
+                                                        "type": "Text",
+                                                        "style": "InfoDetailText",
+                                                        "text": "environment.timing.longPressTimeout : '${environment.timing.longPressTimeout}'"
+                                                    },
+                                                    {
+                                                        "type": "Text",
+                                                        "style": "InfoDetailText",
+                                                        "text": "environment.timing.minimumFlingVelocity : '${environment.timing.minimumFlingVelocity}'"
+                                                    },
+                                                    {
+                                                        "type": "Text",
+                                                        "style": "InfoDetailText",
+                                                        "text": "environment.timing.pressedDuration : '${environment.timing.pressedDuration}'"
+                                                    },
+                                                    {
+                                                        "type": "Text",
+                                                        "style": "InfoDetailText",
+                                                        "text": "environment.timing.topOrScrollTimeout : '${environment.timing.topOrScrollTimeout}'"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }

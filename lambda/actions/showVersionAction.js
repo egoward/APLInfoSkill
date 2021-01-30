@@ -29,7 +29,7 @@ function explodeObjectToArrays(name, obj) {
 exports.handler = function (handlerInput) {
     var aplSupport = Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL'];
     if (!aplSupport) {
-        return handlerInput.responseBuilder.speak("This device does not support APL").getResponse();
+        return handlerInput.responseBuilder.speak("This device does not support APL").withShouldEndSession(true).getResponse();
     }
     var aplSpecVersion = aplSupport.runtime.maxVersion;
 

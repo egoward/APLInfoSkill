@@ -10,8 +10,9 @@ function testPayload( payload ) {
     console.log("Returned value : " + JSON.stringify(retval));
 }
 
-testPayload(require('./launch.json'))
+//testPayload(require('./launch.json'))
 //testPayload(require('./Event-SendVersion.json'))
+testPayload(require('./Intent-Stop.json'))
 
 console.log("Done!");
 
