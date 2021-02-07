@@ -1,33 +1,5 @@
 {
   "manifest": {
-    "publishingInformation": {
-      "locales": {
-        "en-US": {
-          "summary": "Information about APL on this device",
-          "examplePhrases": [
-            "Alexa open A.P.L. Info"
-          ],
-          "name": "APL Engineering Information",
-          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
-          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
-          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png"
-        },
-        "en-GB": {
-          "summary": "Information about APL on this device",
-          "examplePhrases": [
-            "Alexa open A.P.L. Info"
-          ],
-          "name": "APL Engineering Information",
-          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
-          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
-          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png"
-        }
-      },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Please test on Show Gen-1/2 or Show-5/8",
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": []
-    },
     "apis": {
       "custom": {
         "endpoint": {
@@ -35,7 +7,6 @@
         },
         "interfaces": [
           {
-            "type": "ALEXA_PRESENTATION_APL",
             "supportedViewports": [
               {
                 "maxHeight": 480,
@@ -77,7 +48,8 @@
                 "mode": "HUB",
                 "shape": "RECTANGLE"
               }
-            ]
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
           }
         ],
         "tasks": [
@@ -91,12 +63,23 @@
     "manifestVersion": "1.0",
     "privacyAndCompliance": {
       "allowsPurchases": false,
-      "usesPersonalInfo": false,
+      "containsAds": false,
       "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false,
       "locales": {
         "en-US": {
+          "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
+          "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
+        },
+        "en-CA": {
+          "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
+          "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
+        },
+        "en-IN": {
+          "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
+          "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
+        },
+        "en-AU": {
           "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
           "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
         },
@@ -104,7 +87,77 @@
           "privacyPolicyUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#privacyPolicy",
           "termsOfUseUrl": "https://www.edonica.com/alexa/alexa_skill_policy.html#termsOfUse"
         }
-      }
+      },
+      "usesPersonalInfo": false
+    },
+    "publishingInformation": {
+      "automaticDistribution": {
+        "isActive": true,
+        "sourceLocaleForLanguages": [
+          {
+            "language": "en",
+            "sourceLocale": "en-GB"
+          }
+        ]
+      },
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "distributionMode": "PUBLIC",
+      "isAvailableWorldwide": true,
+      "locales": {
+        "en-US": {
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "keywords": [],
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png",
+          "name": "APL Engineering Information",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "summary": "Information about APL on this device"
+        },
+        "en-CA": {
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png",
+          "name": "APL Engineering Information",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "summary": "Information about APL on this device"
+        },
+        "en-IN": {
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png",
+          "name": "APL Engineering Information",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "summary": "Information about APL on this device"
+        },
+        "en-AU": {
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png",
+          "name": "APL Engineering Information",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "summary": "Information about APL on this device"
+        },
+        "en-GB": {
+          "description": "Displays a screen containing information about your device relating to Alexa Presentation Language (APL)",
+          "examplePhrases": [
+            "Alexa open A.P.L. Info"
+          ],
+          "largeIconUri": "https://www.edonica.com/alexa/APLInfo_LargeImage.png",
+          "name": "APL Engineering Information",
+          "smallIconUri": "https://www.edonica.com/alexa/APLInfo_SmallImage.png",
+          "summary": "Information about APL on this device"
+        }
+      },
+      "testingInstructions": "Please test on Show Gen-1/2 or Show-5/8"
     }
   }
 }

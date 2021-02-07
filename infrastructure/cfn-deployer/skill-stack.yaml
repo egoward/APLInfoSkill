@@ -63,3 +63,6 @@ Outputs:
   SkillEndpoint:
     Description: LambdaARN for the regional endpoint
     Value: !GetAtt AlexaSkillFunction.Arn
+  SkillLogGroup:
+    Description: LambdaARN for skill log group
+    Value: !GetAtt AlexaSkillFunctionLogGroup.Arn
