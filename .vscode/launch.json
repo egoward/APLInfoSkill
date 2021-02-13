@@ -8,6 +8,16 @@
             "<node_internals>/**"
         ],
         "type": "pwa-node"
+    },
+    {
+        "name": "Pull Logs",
+        "program": "${workspaceFolder}/localutil/index.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "pwa-node"
     }
+
     ]
 }

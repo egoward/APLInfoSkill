@@ -1,0 +1,13 @@
+{
+  "name": "aplinfoskill-localutil",
+  "version": "1.0.0",
+  "description": "Local util for fetching stuff from the cloud",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Edonica",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.839.0"
+  }
+}
