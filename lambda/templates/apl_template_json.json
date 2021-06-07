@@ -186,6 +186,16 @@
                                             {
                                                 "type": "Text",
                                                 "style": "InfoDetailText",
+                                                "text": "viewport.width : '${viewport.width}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
+                                                "text": "viewport.dpi : '${viewport.dpi}'"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "style": "InfoDetailText",
                                                 "text": "viewport.mode : '${viewport.mode}'"
                                             },
                                             {
@@ -202,11 +212,6 @@
                                                 "type": "Text",
                                                 "style": "InfoDetailText",
                                                 "text": "viewport.shape : '${viewport.shape}'"
-                                            },
-                                            {
-                                                "type": "Text",
-                                                "style": "InfoDetailText",
-                                                "text": "viewport.width : '${viewport.width}'"
                                             },
                                             {
                                                 "type": "Text",

@@ -184,19 +184,6 @@
       ]
     },
     {
-      "pathElement": "_lexicon",
-      "children": [
-        {
-          "pathElement": "[a-z]{2,2}\\-[A-Z]{2,2}",
-          "children": [
-            {
-              "pathElement": "definitions\\.(json|JSON)"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "pathElement": "skill\\.(json|JSON)"
     },
     {
@@ -250,6 +237,14 @@
         },
         {
           "pathElement": "^([A-z0-9-_+\\.\\/]+\\/)*([A-z0-9-_+\\.]+\\.(?i)[A-z]+)$"
+        }
+      ]
+    },
+    {
+      "pathElement": "conversations",
+      "children": [
+        {
+          "pathElement": "[a-zA-Z0-9\\-\\_\\.]{1,64}\\.(json|JSON)"
         }
       ]
     }
